@@ -10,6 +10,7 @@ import useRegisterModal from "@/app/hooks/useRegisterModel";
 import { error } from "console";
 import Modal from "./Modal";
 import Heading from "../Heading";
+import Input from "../inputs/Input";
 
 // establish form control with the function
 const RegisterModal = () => {
@@ -52,6 +53,31 @@ const RegisterModal = () => {
 const bodyContent = (
     <div className="flex flex-col gap-4">
         <Heading title={"Welcome to Airbnb"} subtitle={"Create an Account"}/>
+        <Input 
+        id="email"
+        label="Email"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+        />
+         <Input 
+        id="name"
+        label="Name"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+        />
+         <Input 
+        id="password"
+        type="password"
+        label="password"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+        />
     </div>
 )
 
