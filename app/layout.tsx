@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 // import Modal from "./components/modals/Modal"; //used this to see how we styled our modal
 import RegisterModal from "./components/modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata: Metadata = {
   title: "Airbnb",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           {/* <Modal title="Hello world" actionLabel="Submit" isOpen /> */}
+          <ToasterProvider />
           <RegisterModal/>
           <Navbar />
         </ClientOnly>

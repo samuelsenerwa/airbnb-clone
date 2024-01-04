@@ -11,6 +11,7 @@ import { error } from "console";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
+import toast from "react-hot-toast";
 
 // establish form control with the function
 const RegisterModal = () => {
@@ -41,35 +42,35 @@ const RegisterModal = () => {
         registerModal.onClose();
       })
       .catch((error) => {
-        console.log(error);
+        toast.error("something went wrong");
       })
       .finally(() => {
         setIsLoading(false);
       });
   };
 
-//   The  modal accepts more content that is the header and the footer
+  //   The  modal accepts more content that is the header and the footer
 
-const bodyContent = (
+  const bodyContent = (
     <div className="flex flex-col gap-4">
-        <Heading title={"Welcome to Airbnb"} subtitle={"Create an Account"}/>
-        <Input 
+      <Heading title={"Welcome to Airbnb"} subtitle={"Create an Account"} />
+      <Input
         id="email"
         label="Email"
         disabled={isLoading}
         register={register}
         errors={errors}
         required
-        />
-         <Input 
+      />
+      <Input
         id="name"
         label="Name"
         disabled={isLoading}
         register={register}
         errors={errors}
         required
-        />
-         <Input 
+      />
+      <Input
         id="password"
         type="password"
         label="password"
@@ -77,9 +78,9 @@ const bodyContent = (
         register={register}
         errors={errors}
         required
-        />
+      />
     </div>
-)
+  );
 
   return (
     <Modal
