@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 // import Modal from "./components/modals/Modal"; //used this to see how we styled our modal
 import RegisterModal from "./components/modals/RegisterModal";
+import LoginModal from "./components/modals/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata: Metadata = {
@@ -27,7 +28,8 @@ export default function RootLayout({
         <ClientOnly>
           {/* <Modal title="Hello world" actionLabel="Submit" isOpen /> */}
           <ToasterProvider />
-          <RegisterModal/>
+          <LoginModal />
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
 

@@ -3,11 +3,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../avatar/Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
-import useRegisterModal from "@/app/hooks/useRegisterModel";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 const UserMenu = () => {
-
-  const registerModal = useRegisterModal()
+  const registerModal = useRegisterModal();
 
   // opening and closing the menu Icon
 
