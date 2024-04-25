@@ -1,8 +1,11 @@
+"use client";
+
 import countries from "world-countries"; //TODO:install world-countries package
+import CountrySelect from "../components/inputs/CountrySelect";
 
 const formattedCountries = countries.map((country) => ({
   value: country.cca2,
-  label: CountrySelect.name.common,
+  label: country.name.common,
   flag: country.flag,
   latlng: country.latlng,
   region: country.region,
@@ -16,7 +19,7 @@ const useCountries = () => {
   const getByValue = (value: string) => {
     return formattedCountries.find((item) => item.value === value);
   };
-  return getAll, getByValue;
+  return { getAll, getByValue };
 };
 
 export default useCountries;

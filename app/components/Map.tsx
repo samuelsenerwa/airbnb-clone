@@ -1,6 +1,6 @@
 "use client";
 
-import L from "leaflet"; //TODO: install leaflet package
+import L from "leaflet"; 
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
@@ -20,7 +20,7 @@ interface MapProps {
   center?: number[];
 }
 
-const Map: React.Fc<MapProps> = ({ center }) => {
+const Map: React.FC<MapProps> = ({ center }) => {
   return (
     <MapContainer
       center={(center as L.LatLngExpression) || [51, -0.09]}
@@ -36,10 +36,6 @@ const Map: React.Fc<MapProps> = ({ center }) => {
       {center && <Marker position={center as L.LatLngExpression} />}
     </MapContainer>
   );
-};
-
-const Map = () => {
-  return <div>Map</div>;
 };
 
 export default Map;
