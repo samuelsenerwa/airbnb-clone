@@ -4,6 +4,7 @@ import useCountries from "@/app/hooks/useCountries";
 import { SafeUser } from "@/app/types";
 import Image from "next/image";
 import HeartButton from "../HeartButton";
+import Heading from "../Heading";
 
 interface ListingHeadProps {
   title: string;
@@ -26,7 +27,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
 
   return (
     <>
-      <Heaading
+      <Heading
         title={title}
         subtitle={`${location?.region}, ${location?.label}`}
       />
