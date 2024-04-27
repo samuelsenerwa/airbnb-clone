@@ -3,6 +3,7 @@
 import ListingCard from "../components/listings/ListingCard";
 import { SafeListing, SafeUser } from "../types";
 import Container from "../components/Container";
+import Heading from "../components/Heading";
 
 interface FavoritesClientProps {
   listings: SafeListing[];
