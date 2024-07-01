@@ -40,6 +40,10 @@ export default async function getReservations(params: IParams) {
       endDate: reservation.endDate.toISOString(),
       listing: {
         ...reservation.listing,
+        // createdAt: reservation.listing
+        //   ? reservation.listing.createdAt.toISOString()
+        //   : null,
+        // @ts-ignore
         createdAt: reservation.listing.createdAt.toISOString(), //fix reservation.listing.createdAt.toISOString.tosISOString();
       },
     }));

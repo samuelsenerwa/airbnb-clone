@@ -258,11 +258,13 @@ const RentModal = () => {
         <Input
           id="price"
           label="Price"
-          formatPrice={true}
+          formatPrice
+          // formatPrice={true}
           type="number"
           disabled={isLoading}
           register={register}
           required
+          errors={errors}
         />
       </div>
     );

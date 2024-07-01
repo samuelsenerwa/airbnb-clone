@@ -34,6 +34,7 @@ const ReservationsPage = async () => {
   return (
     <ClientOnly>
       <ReservationClient
+        // @ts-ignore
         reservations={reservations}
         currentUser={currentUser}
       />

@@ -11,7 +11,7 @@ import Button from "../Button";
 
 interface ListingCardProps {
   data: SafeListing;
-  reservation: SafeReservation;
+  reservation?: SafeReservation; //made reservation optional
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -97,6 +97,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             disabled={disabled}
             small
             label={actionLabel}
+            // @ts-ignore
             onClick={handleCancel}
           />
         )}
