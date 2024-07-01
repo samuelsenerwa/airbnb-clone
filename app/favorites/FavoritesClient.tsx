@@ -3,6 +3,7 @@
 import ListingCard from "../components/listings/ListingCard";
 import { SafeListing, SafeUser } from "../types";
 import Container from "../components/Container";
+import Heading from "../components/Heading";
 
 interface FavoritesClientProps {
   listings: SafeListing[];
@@ -15,7 +16,10 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
 }) => {
   return (
     <Container>
-      <Heading title="Favorites" subtitle="List of places you've favorited" />
+      <Heading
+        title="Favorites"
+        subtitle="List of places you've favorited"
+      />
       <div
         className="mt-10 
         grid 
@@ -29,6 +33,7 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
         "
       >
         {listings.map((listing) => (
+          // @ts-ignore
           <ListingCard
             currentUser={currentUser}
             key={listing.id}

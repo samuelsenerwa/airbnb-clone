@@ -35,7 +35,11 @@ const TripsPage = async () => {
   //   if user has reservations
   return (
     <ClientOnly>
-      <TripsClient reservations={reservations} currentUser={currentUser} />
+      <TripsClient
+        // @ts-ignore
+        reservations={reservations}
+        currentUser={currentUser}
+      />
     </ClientOnly>
   );
 };
